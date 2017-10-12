@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Тренажер</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<script src="js/classes/class-word.js"></script>
+	<script src="js/classes/class-collection.js"></script>
+	<script src="js/classes/class-irregular-verbs.js"></script>
+
+	<script src="js/views/view-timer.js"></script>
+	<script src="js/views/view-irregular-verbs.js"></script>
+
+	<script src="js/controls/app.js"></script>
+
+	<script src="js/main.js"></script>
+</head>
+<body>
+
+	<div class="app" id="app">
+
+		<!-- Таймер -->
+		<div class="timer-container" id="viewTimer">
+			<div class="timer" id="timer">00:00:00</div>
+			<button class="timer-button play" id="buttonTimer"></a>
+		</div>
+
+		<!-- Основной контейнер -->
+		<div class="main-container">
+
+			<!-- Неправильные глаголы -->
+			<div class="view-container unvisible" id="viewIrregularVerbs">
+
+				<div class="view-row">
+					<div class="col-1">Глагол:</div>
+					<div id="ivRu">неправильный глагол</div>
+				</div>
+
+				<div class="view-row">
+					<label for="ivEnForm01" class="col-1">Инфинитив:</label>
+					<input type="text" class="col-2 input-word" id="ivEnForm01" data-placeholder="Infinitive" placeholder="Infinitive" tabindex="1">
+				</div>
+
+				<div class="view-row">
+					<label for="ivEnForm02" class="col-1">Прошедшее время:</label>
+					<input type="text" class="col-2 input-word" id="ivEnForm02" data-placeholder="Past Tense" placeholder="Past Tense" tabindex="2">
+				</div>
+						
+				<div class="view-row">
+					<label for="ivEnForm03" class="col-1">Причастие прошедшего времени:</label>
+					<input type="text" class="col-2 input-word" id="ivEnForm03" data-placeholder="Past Participle" placeholder="Past Participle" tabindex="3">
+				</div>
+						
+				<!-- иконки и стикеры результатов -->
+				<div class="icon-result unvisible" id="ivIconResultForm01">
+					<div class="icon"></div>
+					<div class="sticker"></div>
+				</div>
+				<div class="icon-result unvisible" id="ivIconResultForm02">
+					<div class="icon"></div>
+					<div class="sticker"></div>
+				</div>
+				<div class="icon-result unvisible" id="ivIconResultForm03">
+					<div class="icon"></div>
+					<div class="sticker"></div>
+				</div>		
+
+			</div>
+
+			<!-- Кнопки проверки и перехода далее -->
+			<div class="view-row buttons">
+				<button class="button" id="buttonCheck" tabindex="4">Проверить</button>
+				<button class="button" id="buttonNext" tabindex="5">Далее</button>
+			</div>
+		
+			<!-- Блок результатов -->
+			<div class="view-results" id="results">
+
+				<div class="result-row">
+					<div class="col-1">Выполнено всего:</div>
+					<div id="taskDone">0 / 0</div>
+				</div>
+		
+				<div class="result-row">
+					<div class="col-1">Из них правильно:</div>
+					<div id="taskCorrect">0</div>
+				</div>
+		
+				<div class="result-row">
+					<div class="col-1">Ошибок:</div>
+					<div id="taskError">0</div>
+				</div>
+		
+				<div class="result-row">
+					<div class="col-1">Потрачено времени:</div>
+					<div id="taskTimeTotal">00:00:00</div>
+				</div>
+				
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>
